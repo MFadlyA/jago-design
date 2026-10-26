@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jago Games Studio — Pro Poster & Banner Creator</title>
+    <meta name="description" content="Studio desain poster dan banner game interaktif modern untuk Jago Games dengan layout simpel dan warna elegan." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              champagne: {
+                50: '#fdfbf7',
+                100: '#f9f6ee',
+                200: '#f2ebd8',
+                300: '#e7d9b9',
+                400: '#dbc295',
+                500: '#cfa971',
+                600: '#bf9457',
+                700: '#9f7844',
+                800: '#7f5f39',
+                900: '#674d30'
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#0b0f19] text-slate-100 antialiased selection:bg-amber-400 selection:text-neutral-950">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
