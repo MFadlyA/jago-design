@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
+@import './styles/themeShaders.css';
 
 :root {
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
   --font-luxury: 'Cinzel', 'Playfair Display', Georgia, serif;
   --font-mono: 'JetBrains Mono', Consolas, monospace;
+  --font-pixel: 'Press Start 2P', 'Silkscreen', monospace;
 
   --bg-app: #0b0f19;
   --bg-sidebar: #0d121f;
@@ -82,3 +84,46 @@ input[type="range"] {
 .animate-fade-in {
   animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Font Pixel */
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+/* Retro Arcade Diagonal Stripes (Matching Reference 2 & 3) */
+.bg-diagonal-retro-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #0aa8b8 0px,
+    #0aa8b8 36px,
+    #ff3377 36px,
+    #ff3377 72px,
+    #ff8800 72px,
+    #ff8800 108px
+  );
+}
+
+/* Retro Text Shadow / 3D Pixel Pop */
+.pixel-text-shadow {
+  text-shadow: 
+    2px 2px 0px #000,
+    -2px -2px 0px #000,
+    2px -2px 0px #000,
+    -2px 2px 0px #000,
+    4px 4px 0px rgba(0, 0, 0, 0.7);
+}
+
+.pixel-cyan-shadow {
+  text-shadow: 
+    2px 2px 0px #06b6d4,
+    4px 4px 0px #0e7490,
+    6px 6px 0px #000;
+}
+
+.pixel-pink-shadow {
+  text-shadow: 
+    2px 2px 0px #ec4899,
+    4px 4px 0px #be185d,
+    6px 6px 0px #000;
+}
+

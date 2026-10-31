@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+
+# Cloudflare & Vite caches
+.wrangler
+.vite
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

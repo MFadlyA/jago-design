@@ -1,0 +1,100 @@
+.font-luxury {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+}
+.font-serif-title {
+  font-family: 'Playfair Display', 'Cinzel', Georgia, serif;
+}
+
+/* Calm Soft Champagne Theme (Default) */
+.theme-calm .gold-3d-heading {
+  background: linear-gradient(180deg, #ffffff 0%, var(--tmpl-primary-superlight, #f7eedb) 25%, var(--tmpl-primary, #dfbd70) 58%, var(--tmpl-primary-dark, #8e6524) 88%, var(--tmpl-primary-light, #f2dfb1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 0px var(--tmpl-primary-darker, #2a1a06)) drop-shadow(0 4px 10px rgba(0,0,0,0.85)) drop-shadow(0 0 10px var(--tmpl-primary-glow, rgba(223,189,112,0.25)));
+}
+
+.theme-calm .gold-subtitle-glow {
+  background: linear-gradient(180deg, #fdfbf7 0%, var(--tmpl-primary-light, #edd9b5) 50%, var(--tmpl-primary, #c49c51) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.85)) drop-shadow(0 0 6px var(--tmpl-primary-glow, rgba(223,189,112,0.2)));
+}
+
+.theme-calm .gold-metallic-rim {
+  background: linear-gradient(135deg, var(--tmpl-primary-superlight, #faf7ee) 0%, var(--tmpl-primary, #dfbd70) 24%, var(--tmpl-primary-dark, #6e4c19) 48%, var(--tmpl-primary-light, #ebd39b) 74%, var(--tmpl-primary-darker, #825a21) 100%);
+}
+
+.theme-calm .gold-banner-plate {
+  background: linear-gradient(90deg, var(--tmpl-primary-dark, #875c1b) 0%, var(--tmpl-primary-light, #f4e3be) 22%, #fdfbf7 50%, var(--tmpl-primary-light, #edd39a) 78%, var(--tmpl-primary-darker, #785016) 100%);
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.7), inset 0 -2px 4px rgba(90,45,12,0.6);
+}
+
+.theme-calm .capsule-double-gold {
+  background: linear-gradient(180deg, rgba(28, 25, 20, 0.94) 0%, rgba(13, 16, 24, 0.98) 100%);
+  border: 1.5px solid var(--tmpl-primary, rgba(223, 189, 112, 0.55));
+  box-shadow:
+    0 0 0 2px rgba(13, 16, 24, 0.95),
+    0 0 0 3px var(--tmpl-primary-glow, rgba(180, 140, 60, 0.28)),
+    inset 0 1px 8px rgba(245, 230, 179, 0.12),
+    0 8px 18px rgba(0, 0, 0, 0.85);
+}
+
+/* Classic Vivid Gold Theme */
+.theme-classic .gold-3d-heading {
+  background: linear-gradient(180deg, #ffffff 0%, var(--tmpl-primary-superlight, #fef08a) 28%, var(--tmpl-primary, #eab308) 58%, var(--tmpl-primary-dark, #92400e) 88%, var(--tmpl-primary-light, #fef08a) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 0px var(--tmpl-primary-darker, #451a03)) drop-shadow(0 5px 12px rgba(0,0,0,0.95)) drop-shadow(0 0 18px var(--tmpl-primary-glow-strong, rgba(234,179,8,0.45)));
+}
+
+.theme-classic .gold-subtitle-glow {
+  background: linear-gradient(180deg, #fffbeb 0%, var(--tmpl-primary-light, #fde047) 50%, var(--tmpl-primary, #ca8a04) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.95)) drop-shadow(0 0 10px var(--tmpl-primary-glow, rgba(234,179,8,0.4)));
+}
+
+.theme-classic .gold-metallic-rim {
+  background: linear-gradient(135deg, var(--tmpl-primary-superlight, #fef9c3) 0%, var(--tmpl-primary, #eab308) 22%, var(--tmpl-primary-dark, #713f12) 48%, var(--tmpl-primary-light, #fde047) 74%, var(--tmpl-primary-darker, #92400e) 100%);
+}
+
+.theme-classic .gold-banner-plate {
+  background: linear-gradient(90deg, var(--tmpl-primary-dark, #b45309) 0%, var(--tmpl-primary-superlight, #fef08a) 22%, #fffbeb 50%, var(--tmpl-primary-light, #fde047) 78%, var(--tmpl-primary-darker, #a16207) 100%);
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.8), inset 0 -2px 4px rgba(120,53,15,0.7);
+}
+
+.theme-classic .capsule-double-gold {
+  background: linear-gradient(180deg, rgba(42, 35, 22, 0.92) 0%, rgba(14, 12, 9, 0.97) 100%);
+  border: 1.5px solid var(--tmpl-primary, rgba(234, 179, 8, 0.75));
+  box-shadow:
+    0 0 0 2px rgba(15, 12, 8, 0.95),
+    0 0 0 3.5px var(--tmpl-primary-glow-strong, rgba(202, 138, 4, 0.45)),
+    inset 0 1px 12px rgba(254, 240, 138, 0.2),
+    0 10px 22px rgba(0, 0, 0, 0.9);
+}
+
+/* Geometry & Textures */
+.brushed-metal-panel {
+  background:
+    repeating-linear-gradient(
+      -55deg,
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 2px,
+      transparent 2px,
+      transparent 7px
+    ),
+    linear-gradient(180deg, #131722 0%, #0a0d14 100%);
+}
+
+.carbon-dots-pattern {
+  background-image: radial-gradient(var(--tmpl-primary-glow, rgba(223, 189, 112, 0.15)) 1px, transparent 1px);
+  background-size: 6px 6px;
+}
+
+.skew-card-10 {
+  transform: skewX(-9.5deg);
+}
+.unskew-card-10 {
+  transform: skewX(9.5deg);
+}
+
