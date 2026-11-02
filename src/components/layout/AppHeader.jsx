@@ -22,7 +22,9 @@ export default function AppHeader({
   activePrimaryDerived,
   onResetTemplate,
   onDownloadPoster,
-  isExporting
+  onDownloadPosterUnder2MB,
+  isExporting,
+  exportingMode
 }) {
   return (
     <header className="h-16 border-b border-slate-800/80 bg-slate-900/90 backdrop-blur-md px-4 sm:px-6 flex items-center justify-between sticky top-0 z-40">
@@ -179,14 +181,28 @@ export default function AppHeader({
           <RotateCcw className="w-4 h-4" />
         </button>
 
-        {/* Download PNG Button */}
+        {/* Download Under 2MB Button */}
+        <button
+          onClick={onDownloadPosterUnder2MB}
+          disabled={isExporting}
+          title="Download gambar dengan ukuran terkompresi di bawah 2 MB (Cocok untuk Shopee, Tokopedia, Marketplace)"
+          className="flex items-center gap-1.5 px-3 py-2 rounded-xl font-semibold text-xs bg-slate-800/80 hover:bg-slate-800 text-amber-300 hover:text-amber-200 border border-amber-500/30 hover:border-amber-400/60 active:scale-95 transition shadow-sm disabled:opacity-50"
+        >
+          <Download className="w-3.5 h-3.5 text-amber-400" />
+          <span>
+            {exportingMode === 'under2mb' ? 'Mengompres...' : 'Download (< 2 MB)'}
+          </span>
+        </button>
+
+        {/* Download HD PNG Button */}
         <button
           onClick={onDownloadPoster}
           disabled={isExporting}
+          title="Download gambar kualitas maksimal (HD)"
           className="flex items-center gap-2 px-3.5 py-2 rounded-xl font-semibold text-xs bg-gradient-to-r from-amber-200 via-amber-300 to-amber-400 text-slate-950 hover:brightness-105 active:scale-95 transition shadow-[0_4px_16px_rgba(217,119,6,0.22)] disabled:opacity-50"
         >
           <Download className="w-3.5 h-3.5" />
-          <span>{isExporting ? 'Mengekspor HD...' : 'Download HD'}</span>
+          <span>{exportingMode === 'hd' ? 'Mengekspor HD...' : 'Download HD'}</span>
         </button>
       </div>
     </header>

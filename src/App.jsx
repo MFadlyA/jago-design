@@ -69,7 +69,9 @@ export default function App() {
   const {
     posterRef,
     isExporting,
-    handleDownloadPoster
+    exportingMode,
+    handleDownloadPoster,
+    handleDownloadPosterUnder2MB
   } = usePosterExport({
     activeTemplate,
     t2Data,
@@ -105,7 +107,9 @@ export default function App() {
         activePrimaryDerived={activePrimaryDerived}
         onResetTemplate={() => handleResetTemplate(showToast)}
         onDownloadPoster={handleDownloadPoster}
+        onDownloadPosterUnder2MB={handleDownloadPosterUnder2MB}
         isExporting={isExporting}
+        exportingMode={exportingMode}
       />
 
       {/* Main Studio Workspace */}
