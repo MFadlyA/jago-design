@@ -5,6 +5,7 @@ import { DEFAULT_ENSHROUDED_SVG_DATA } from './gamePresets';
 // INITIAL DATA STATE FOR TEMPLATE 1 & TEMPLATE 2
 // ============================================================================
 export const INITIAL_TEMPLATE_1 = {
+  catalogRatio: '3:4', // '3:4' | '16:9' | '1:1' | '2:1'
   brandName: 'JAGO GAMES',
   colors: { ...DEFAULT_TEMPLATE_COLORS.template1 },
   logoCustom: null,

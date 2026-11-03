@@ -5,9 +5,10 @@
 /**
  * Generate standardized poster filename based on template and metadata
  */
-export const getPosterExportFilename = (activeTemplate, { t2Data, t4Data, t5Data } = {}) => {
+export const getPosterExportFilename = (activeTemplate, { t1Data, t2Data, t4Data, t5Data } = {}) => {
   if (activeTemplate === 'template1') {
-    return 'JagoGames-Poster-Katalog';
+    const ratio = t1Data?.catalogRatio ? t1Data.catalogRatio.replace(':', 'x') : '3x4';
+    return `JagoGames-Poster-Katalog-${ratio}`;
   }
   if (activeTemplate === 'template2') {
     const title = t2Data?.gameTitle ? t2Data.gameTitle.replace(/\s+/g, '-') : 'Single-Showcase';

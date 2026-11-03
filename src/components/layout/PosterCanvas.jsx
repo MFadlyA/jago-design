@@ -42,6 +42,8 @@ export default function PosterCanvas({
         zoom={zoom}
         setZoom={setZoom}
         activeTemplate={activeTemplate}
+        t1Data={t1Data}
+        setT1Data={setT1Data}
       />
 
       {/* SCALABLE POSTER ARTBOARD */}

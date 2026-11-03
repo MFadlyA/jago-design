@@ -5,7 +5,7 @@ import {
   downloadElementUnder2MB
 } from '../utils/exportUtils';
 
-export function usePosterExport({ activeTemplate, t2Data, t4Data, t5Data, showToast }) {
+export function usePosterExport({ activeTemplate, t1Data, t2Data, t4Data, t5Data, showToast }) {
   const [isExporting, setIsExporting] = useState(false);
   const [exportingMode, setExportingMode] = useState(null); // 'hd' | 'under2mb' | null
   const posterRef = useRef(null);
@@ -25,7 +25,7 @@ export function usePosterExport({ activeTemplate, t2Data, t4Data, t5Data, showTo
     setIsExporting(true);
     setExportingMode('hd');
     try {
-      const filename = getPosterExportFilename(activeTemplate, { t2Data, t4Data, t5Data });
+      const filename = getPosterExportFilename(activeTemplate, { t1Data, t2Data, t4Data, t5Data });
       await downloadElementAsPng(posterRef.current, filename);
       if (showToast) {
         showToast('Poster HD berhasil diunduh!');
@@ -46,7 +46,7 @@ export function usePosterExport({ activeTemplate, t2Data, t4Data, t5Data, showTo
     setIsExporting(true);
     setExportingMode('under2mb');
     try {
-      const filename = getPosterExportFilename(activeTemplate, { t2Data, t4Data, t5Data });
+      const filename = getPosterExportFilename(activeTemplate, { t1Data, t2Data, t4Data, t5Data });
       const result = await downloadElementUnder2MB(posterRef.current, filename);
       if (showToast) {
         showToast(`Poster (< 2 MB) berhasil diunduh! (${result.sizeFormatted})`);

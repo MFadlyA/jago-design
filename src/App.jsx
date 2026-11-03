@@ -74,6 +74,7 @@ export default function App() {
     handleDownloadPosterUnder2MB
   } = usePosterExport({
     activeTemplate,
+    t1Data,
     t2Data,
     t4Data,
     t5Data,

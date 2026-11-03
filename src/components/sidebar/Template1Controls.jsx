@@ -4,7 +4,8 @@ import {
   Eye,
   Upload,
   Trash2,
-  Image as ImageIcon
+  Image as ImageIcon,
+  LayoutGrid
 } from 'lucide-react';
 import { PRESET_GAMES } from '../../constants/gamePresets';
 
@@ -16,6 +17,8 @@ export function Template1ImagesControls({
   triggerSlotUpload,
   showToast
 }) {
+  const currentRatio = t1Data.catalogRatio || '3:4';
+
   const fillAllT1SampleImages = () => {
     setT1Data({
       ...t1Data,
@@ -64,6 +67,49 @@ export function Template1ImagesControls({
 
   return (
     <div className="space-y-4">
+      {/* Aspect Ratio Switcher Card */}
+      <div className="bg-slate-900/50 border border-slate-800/70 rounded-2xl p-3.5 space-y-2.5">
+        <div className="flex items-center justify-between">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-300 flex items-center gap-1.5">
+            <LayoutGrid className="w-3.5 h-3.5 text-amber-400" />
+            Format Aspek Rasio
+          </h3>
+          <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30 font-bold">
+            {currentRatio}
+          </span>
+        </div>
+        <div className="grid grid-cols-4 gap-1.5">
+          {[
+            { id: '3:4', name: '3:4', sub: 'Portrait' },
+            { id: '16:9', name: '16:9', sub: 'Wide' },
+            { id: '1:1', name: '1:1', sub: 'Square' },
+            { id: '2:1', name: '2:1', sub: 'Banner' }
+          ].map((item) => {
+            const active = currentRatio === item.id;
+            return (
+              <button
+                key={item.id}
+                onClick={() => setT1Data({ ...t1Data, catalogRatio: item.id })}
+                className={`flex flex-col items-center justify-center py-2 px-1 rounded-xl text-center transition border ${
+                  active
+                    ? 'bg-amber-400 text-slate-950 border-amber-300 font-bold shadow-md shadow-amber-400/20'
+                    : 'bg-slate-950/70 hover:bg-slate-800 border-slate-800 text-slate-300'
+                }`}
+              >
+                <span className="text-xs leading-none">{item.name}</span>
+                <span
+                  className={`text-[9px] mt-1 uppercase tracking-tight ${
+                    active ? 'text-slate-950 font-semibold' : 'text-slate-500'
+                  }`}
+                >
+                  {item.sub}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Quick Action Buttons */}
       <div className="grid grid-cols-2 gap-2">
         <button
